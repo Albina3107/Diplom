@@ -44,7 +44,7 @@ public class AdvertsServiceImpl implements AdvertsService {
         //animalsTypeRepository.save(new AnimalType("Cats", "Breeds"));
         //animalsTypeRepository.save(new AnimalType("Others", "Breeds"));
         AnimalType type = animalsTypeRepository.findAnimalTypeByTYPE(animalType);
-        Animals animals = animalsRepository.save(new Animals(type.getID(), city.getID(),animalName, animalHistory, "9.png", animalAge));
+        Animals animals = animalsRepository.save(new Animals(type.getID(), city.getID(),animalName, animalHistory, animalPhoto, animalAge));
         Adverts ad = advertsRepository.save(new Adverts(userId, animals.getID(),date, details ));
         PhoneNumber num = phoneNumberRepository.findPhoneNumberByVLNTR(userId);
        return new Responce(animals, city, type, user, ad, num);
