@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta name="robots" content="noindex">
+    <title>Tilda</title></head>
+<body style="background-color:#eee;">
+<table style="width:100%; height:100%;">
+    <table>
+        <thead>
+        </thead>
+        <tbody>
+        <tr th:each="res : ${Responce}">
+
+            <div>
+                <div>
+                    <div th:utext="${res.getAnimals().getNAME()}">
+                    </div>
+                    <div th:utext="${res.getAnimals().getNAME()}">
+                    </div>
+                </div>
+            </div>
+        </tr>
+        </tbody>
+
+    </table>
+</table>
+</body>
+</html>
